@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>হযরত ওসমান গনি রা. ফাউন্ডেশন</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hind Siliguri',sans-serif;background:#f0f4f8;color:#1a202c;font-size:14px}
+:root{--g:#1a7a3c;--gl:#e8f5ee;--gd:#0f5228;--gold:#b8860b;--goldl:#fdf6dc;--goldd:#7a5800;--red:#dc2626;--redl:#fef2f2;--bg:#fff;--bg2:#f7fafc;--txt:#1a202c;--txt2:#718096;--bdr:#e2e8f0;--shadow:0 2px 12px rgba(0,0,0,0.08)}
+.page{display:none}.page.active{display:block}
+
+/* TOPBAR */
+.topbar{background:var(--gd);color:#fff;padding:6px 20px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
+
+/* HEADER */
+.header{background:linear-gradient(135deg,var(--g) 0%,var(--gd) 100%);color:#fff;padding:16px 20px;display:flex;align-items:center;gap:14px}
+.logo{width:54px;height:54px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:var(--g);border:3px solid var(--gold);flex-shrink:0;box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+.header h1{font-size:16px;font-weight:600;line-height:1.3}
+.header p{font-size:11px;opacity:.8;margin-top:2px}
+.hbadge{margin-left:auto;background:var(--gold);color:#fff;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap;display:none}
+
+/* NAV */
+.nav{background:#fff;border-bottom:1px solid var(--bdr);display:flex;overflow-x:auto;box-shadow:0 2px 4px rgba(0,0,0,0.04);display:none}
+.nav::-webkit-scrollbar{height:2px}.nav::-webkit-scrollbar-thumb{background:var(--g)}
+.ni{padding:10px 14px;font-size:12px;cursor:pointer;color:var(--txt2);border-bottom:2px solid transparent;white-space:nowrap;transition:.2s;display:flex;align-items:center;gap:5px;font-weight:500}
+.ni.active{color:var(--g);border-bottom-color:var(--g);font-weight:600}
+.ni:hover{color:var(--g);background:var(--gl)}
+
+/* MAIN */
+.main{padding:16px;min-height:420px}
+.card{background:#fff;border:1px solid var(--bdr);border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:var(--shadow)}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:12px}
+.sc{background:#fff;border:1px solid var(--bdr);border-radius:10px;padding:13px;box-shadow:var(--shadow)}
+.sc .lb{font-size:11px;color:var(--txt2);margin-bottom:5px;display:flex;align-items:center;gap:5px}
+.sc .lb i{color:var(--g);font-size:16px}
+.sc .vl{font-size:22px;font-weight:700;color:var(--g)}
+.sc .sb{font-size:10px;color:var(--txt2);margin-top:2px}
+.st{font-size:13px;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:7px;color:var(--txt)}
+.st i{color:var(--g);font-size:18px}
+
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{background:var(--gl);color:var(--gd);padding:8px 10px;text-align:left;font-weight:600;border-bottom:1px solid var(--bdr)}
+.tbl td{padding:8px 10px;border-bottom:1px solid var(--bdr);color:var(--txt)}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:var(--bg2)}
+
+/* BADGES */
+.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600}
+.bg{background:var(--gl);color:var(--gd)}.bo{background:var(--goldl);color:var(--goldd)}.br{background:var(--redl);color:var(--red)}
+
+/* AVATAR */
+.av{width:28px;height:28px;border-radius:50%;background:var(--g);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;margin-right:6px;vertical-align:middle;flex-shrink:0}
+
+/* BUTTONS */
+.btn{padding:8px 14px;border-radius:8px;border:1px solid var(--bdr);background:#fff;cursor:pointer;font-size:12px;color:var(--txt);transition:.2s;display:inline-flex;align-items:center;gap:5px;font-family:'Hind Siliguri',sans-serif;font-weight:500}
+.btn:hover{background:var(--bg2)}.btng{background:var(--g);color:#fff;border-color:var(--g)}.btng:hover{background:var(--gd)}
+.btn-full{width:100%;justify-content:center}
+
+/* FORMS */
+.fg{margin-bottom:10px}
+.fg label{font-size:11px;color:var(--txt2);display:block;margin-bottom:4px;font-weight:600}
+.fg input,.fg select,.fg textarea{width:100%;padding:9px 12px;border:1px solid var(--bdr);border-radius:8px;background:#fff;color:var(--txt);font-size:13px;font-family:'Hind Siliguri',sans-serif;transition:.2s}
+.fg input:focus,.fg select:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 3px rgba(26,122,60,.1)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+/* ALERTS */
+.err{font-size:11px;color:var(--red);margin-top:4px;display:none;padding:7px 10px;background:var(--redl);border-radius:8px;border:1px solid #fca5a5}
+.suc{font-size:11px;color:var(--gd);margin-top:4px;display:none;padding:7px 10px;background:var(--gl);border-radius:8px;border:1px solid #6ee7a0}
+
+/* DIVIDER */
+.divider{display:flex;align-items:center;gap:8px;margin:12px 0;font-size:11px;color:var(--txt2)}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--bdr)}
+
+/* SOCIAL BTNS */
+.soc-btn{width:100%;padding:9px;border-radius:8px;border:1.5px solid;background:#fff;cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:8px;font-family:'Hind Siliguri',sans-serif;font-weight:500;transition:.15s}
+.soc-btn:hover{opacity:.88}
+
+/* TABS */
+.tab-row{display:flex;border:1px solid var(--bdr);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--bg2)}
+.tab-btn{flex:1;padding:9px 6px;border:none;background:transparent;color:var(--txt2);cursor:pointer;font-size:11px;font-family:'Hind Siliguri',sans-serif;font-weight:500;transition:.2s}
+.tab-btn.active{background:var(--g);color:#fff;font-weight:600}
+
+/* PAY METHODS */
+.pay-method{border:1.5px solid var(--bdr);border-radius:10px;padding:11px 13px;display:flex;align-items:center;gap:10px;margin-bottom:8px;cursor:pointer;transition:.2s}
+.pay-method:hover,.pay-method.selected{border-color:var(--g);background:var(--gl)}
+.pm-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;color:#fff}
+.pm-name{font-size:13px;font-weight:600;color:var(--txt)}
+.pm-sub{font-size:10px;color:var(--txt2);margin-top:1px}
+
+/* NOTICE */
+.nitem{border-left:4px solid var(--g);padding:9px 12px;margin-bottom:8px;background:#fff;border-radius:0 10px 10px 0;box-shadow:var(--shadow)}
+.nitem .nt{font-size:13px;font-weight:600;margin-bottom:3px}
+.nitem .nd{font-size:10px;color:var(--txt2)}
+
+/* RULE */
+.rl{display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--bdr);font-size:12px;align-items:flex-start}
+.rn{width:22px;height:22px;border-radius:50%;background:var(--g);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;margin-top:1px}
+
+/* ADMIN GRID */
+.agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(95px,1fr));gap:8px}
+.abtn{background:#fff;border:1px solid var(--bdr);border-radius:10px;padding:12px 8px;text-align:center;cursor:pointer;transition:.2s;box-shadow:var(--shadow)}
+.abtn:hover{background:var(--gl);border-color:var(--g)}
+.abtn i{font-size:24px;color:var(--g);display:block;margin-bottom:5px}
+.abtn span{font-size:11px;color:var(--txt2)}
+
+/* PROFILE */
+.prof-av{width:64px;height:64px;border-radius:50%;background:var(--g);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;border:3px solid var(--gold);flex-shrink:0}
+.ps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.psv{background:var(--gl);border-radius:8px;padding:9px;text-align:center}
+.psv .pv{font-size:16px;font-weight:700;color:var(--g)}
+.psv .pl{font-size:10px;color:var(--gd);margin-top:2px}
+
+/* BAR CHART */
+.bar-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:11px}
+.bar-row .mo{width:32px;color:var(--txt2);flex-shrink:0}
+.bw{flex:1;background:var(--bg2);border-radius:5px;height:16px;overflow:hidden}
+.bf{height:100%;background:linear-gradient(90deg,var(--g),#27ae60);border-radius:5px;display:flex;align-items:center;padding-left:5px;color:#fff;font-size:9px;font-weight:600}
+.bar-row .am{width:65px;text-align:right;font-weight:600;color:var(--g);font-size:11px}
+
+/* INFO BOX */
+.info-box{padding:9px 12px;background:var(--gl);border-radius:8px;font-size:11px;color:var(--gd);margin-bottom:10px;border:1px solid #a7f3d0}
+
+/* FOOTER */
+footer{background:var(--gd);color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+footer .fl{font-size:11px;opacity:.85}
+footer .icons{display:flex;gap:12px}
+footer .icons a{color:#fff;font-size:18px;opacity:.8;transition:.2s;text-decoration:none}
+footer .icons a:hover{opacity:1}
+
+/* AUTH WRAPPER */
+.auth-wrap{max-width:400px;margin:0 auto;padding:10px 0}
+.auth-logo{width:60px;height:60px;border-radius:50%;background:var(--g);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;border:3px solid var(--gold);margin:0 auto 10px;box-shadow:0 4px 14px rgba(26,122,60,.3)}
+
+/* STEP FORGOT */
+.step-icon{font-size:40px;color:var(--g);display:block;text-align:center;margin-bottom:8px}
+.step-title{font-size:15px;font-weight:700;text-align:center;margin-bottom:4px}
+.step-sub{font-size:11px;color:var(--txt2);text-align:center;margin-bottom:14px}
+
+@media(max-width:600px){
+  .header h1{font-size:13px}
+  .sg{grid-template-columns:repeat(2,1fr)}
+  .ps{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:1fr}
+  .agrid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span><i class="ti ti-map-pin"></i> বাংলাদেশ · সমিতি পোর্টাল</span>
+  <span id="topuser">লগইন করুন</span>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">হ.ও</div>
+  <div>
+    <h1>হযরত ওসমান গনি রা. ফাউন্ডেশন</h1>
+    <p>সমিতি ব্যবস্থাপনা পোর্টাল · বাংলাদেশ</p>
+  </div>
+  <div class="hbadge" id="rolebadge">Admin</div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="mainnav">
+  <div class="ni active" onclick="pg('dashboard')"><i class="ti ti-layout-dashboard"></i>ড্যাশবোর্ড</div>
+  <div class="ni" onclick="pg('members')"><i class="ti ti-users"></i>সদস্য</div>
+  <div class="ni" onclick="pg('profile')"><i class="ti ti-user-circle"></i>প্রোফাইল</div>
+  <div class="ni" onclick="pg('payment')"><i class="ti ti-credit-card"></i>পেমেন্ট</div>
+  <div class="ni" onclick="pg('accounts')"><i class="ti ti-report-money"></i>হিসাব</div>
+  <div class="ni" onclick="pg('loans')"><i class="ti ti-cash"></i>ঋণ</div>
+  <div class="ni" onclick="pg('notices')"><i class="ti ti-bell"></i>নোটিশ</div>
+  <div class="ni" onclick="pg('rules')"><i class="ti ti-book"></i>নিয়মাবলি</div>
+  <div class="ni" id="adminnav" style="display:none" onclick="pg('admin')"><i class="ti ti-settings"></i>অ্যাডমিন</div>
+  <div class="ni" onclick="logout()"><i class="ti ti-logout"></i>লগআউট</div>
+</nav>
+
+<div class="main">
+
+<!-- ============ AUTH PAGE ============ -->
+<div class="page active" id="page-auth">
+  <div class="auth-wrap">
+    <div class="auth-logo">হ.ও</div>
+    <div style="text-align:center;margin-bottom:14px">
+      <div style="font-size:15px;font-weight:700;color:var(--txt)">হযরত ওসমান গনি রা. ফাউন্ডেশন</div>
+      <div style="font-size:11px;color:var(--txt2);margin-top:2px">আপনার অ্যাকাউন্টে প্রবেশ করুন</div>
+    </div>
+
+    <div class="tab-row">
+      <button class="tab-btn active" onclick="switchTab('login')">লগইন</button>
+      <button class="tab-btn" onclick="switchTab('register')">রেজিস্ট্রেশন</button>
+      <button class="tab-btn" onclick="switchTab('forgot')">পাসওয়ার্ড ভুলেছি</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="loginform">
+      <div class="card">
+        <div class="soc-btn" onclick="socialLogin('facebook')" style="border-color:#1877f2;color:#1877f2">
+          <i class="ti ti-brand-facebook" style="font-size:20px"></i> Facebook দিয়ে লগইন
+        </div>
+        <div class="soc-btn" onclick="socialLogin('whatsapp')" style="border-color:#25d366;color:#25d366">
+          <i class="ti ti-brand-whatsapp" style="font-size:20px"></i> WhatsApp দিয়ে লগইন
+        </div>
+        <div class="divider">অথবা ইমেইল দিয়ে</div>
+        <div class="fg">
+          <label><i class="ti ti-mail"></i> ইমেইল ঠিকানা</label>
+          <input type="email" id="lemail" placeholder="example@gmail.com">
+        </div>
+        <div class="fg">
+          <label><i class="ti ti-lock"></i> পাসওয়ার্ড</label>
+          <input type="password" id="lpass" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()">
+        </div>
+        <div style="text-align:right;margin:-4px 0 8px">
+          <span style="font-size:11px;color:var(--g);cursor:pointer;font-weight:500" onclick="switchTab('forgot')">পাসওয়ার্ড ভুলেছেন?</span>
+        </div>
+        <div id="lerr" class="err"><i class="ti ti-alert-circle"></i> ইমেইল বা পাসওয়ার্ড ভুল।</div>
+        <button class="btn btng btn-full" onclick="doLogin()" style="margin-top:6px">
+          <i class="ti ti-login"></i> লগইন করুন
+        </button>
+        <div style="text-align:center;margin-top:12px;font-size:11px;color:var(--txt2)">
+          অ্যাকাউন্ট নেই? <span style="color:var(--g);cursor:pointer;font-weight:600" onclick="switchTab('register')">রেজিস্ট্রেশন করুন</span>
+        </div>
+      </div>
+      <div style="padding:10px 12px;background:var(--gl);border-radius:8px;font-size:11px;color:var(--gd);border:1px solid #a7f3d0">
+        <strong>🔑 Admin Demo:</strong> mhnayeem54@gmail.com / admin123<br>
+        <strong>👤 Member Demo:</strong> member@samity.bd / member123
+      </div>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="regform" style="display:none">
+      <div class="card">
+        <div id="regsuccess" style="display:none;text-align:center;padding:16px 0">
+          <i class="ti ti-circle-check step-icon"></i>
+          <div class="step-title" style="color:var(--gd)">রেজিস্ট্রেশন সফল!</div>
+          <div class="step-sub">অ্যাডমিন অনুমোদনের পর লগইন করতে পারবেন।</div>
+          <button class="btn btng" onclick="switchTab('login')">লগইন পেজে যান</button>
+        </div>
+        <div id="regfields">
+          <div class="soc-btn" onclick="socialLogin('facebook')" style="border-color:#1877f2;color:#1877f2">
+            <i class="ti ti-brand-facebook" style="font-size:20px"></i> Facebook দিয়ে রেজিস্ট্রেশন
+          </div>
+          <div class="soc-btn" onclick="socialLogin('whatsapp')" style="border-color:#25d366;color:#25d366">
+            <i class="ti ti-brand-whatsapp" style="font-size:20px"></i> WhatsApp দিয়ে রেজিস্ট্রেশন
+          </div>
+          <div class="divider">অথবা ফর্ম পূরণ করুন</div>
+          <div class="g2">
+            <div class="fg"><label>পূর্ণ নাম *</label><input type="text" id="rname" placeholder="আপনার নাম"></div>
+            <div class="fg"><label>মোবাইল *</label><input type="text" id="rphone" placeholder="01XXXXXXXXX"></div>
+          </div>
+          <div class="fg"><label>ইমেইল *</label><input type="email" id="remail" placeholder="email@gmail.com"></div>
+          <div class="g2">
+            <div class="fg"><label>পাসওয়ার্ড *</label><input type="password" id="rpass" placeholder="কমপক্ষে ৬ অক্ষর"></div>
+            <div class="fg"><label>NID নম্বর</label><input type="text" id="rnid" placeholder="১০/১৭ সংখ্যা"></div>
+          </div>
+          <div class="g2">
+            <div class="fg">
+              <label>জেলা</label>
+              <select id="rdist">
+                <option value="">বেছে নিন</option>
+                <option>ঢাকা</option><option>চট্টগ্রাম</option><option>রাজশাহী</option>
+                <option>খুলনা</option><option>বরিশাল</option><option>সিলেট</option>
+                <option>রংপুর</option><option>ময়মনসিংহ</option><option>কুমিল্লা</option>
+                <option>গাজীপুর</option><option>নারায়ণগঞ্জ</option>
+              </select>
+            </div>
+            <div class="fg"><label>মাসিক জমা (৳)</label><input type="number" id="ramt" placeholder="৫০০"></div>
+          </div>
+          <div id="rerr" class="err"><i class="ti ti-alert-circle"></i> সব তারকা (*) চিহ্নিত ঘর পূরণ করুন।</div>
+          <button class="btn btng btn-full" onclick="doRegister()">
+            <i class="ti ti-user-plus"></i> রেজিস্ট্রেশন করুন
+          </button>
+          <div style="margin-top:9px;font-size:11px;color:var(--txt2);padding:8px 10px;background:var(--bg2);border-radius:8px">
+            <i class="ti ti-info-circle"></i> রেজিস্ট্রেশনের পর অ্যাডমিন অনুমোদন করলে লগইন করতে পারবেন।
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORGOT PASSWORD -->
+    <div id="forgotform" style="display:none">
+      <div class="card">
+        <!-- Step 1: Enter Email -->
+        <div id="fstep1">
+          <i class="ti ti-lock-open step-icon"></i>
+          <div class="step-title">পাসওয়ার্ড রিসেট করুন</div>
+          <div class="step-sub">আপনার নিবন্ধিত ইমেইলে OTP কোড পাঠানো হবে</div>
+          <div class="fg"><label>নিবন্ধিত ইমেইল</label><input type="email" id="femail" placeholder="email@gmail.com"></div>
+          <div id="ferr" class="err"><i class="ti ti-alert-circle"></i> এই ইমেইল দিয়ে কোনো অ্যাকাউন্ট পাওয়া যায়নি।</div>
+          <button class="btn btng btn-full" onclick="sendOTP()"><i class="ti ti-send"></i> OTP পাঠান</button>
+        </div>
+        <!-- Step 2: OTP -->
+        <div id="fstep2" style="display:none">
+          <i class="ti ti-mail-check step-icon"></i>
+          <div class="step-title">OTP যাচাই করুন</div>
+          <div class="step-sub" id="otpsentto">ইমেইলে ৬ সংখ্যার OTP পাঠানো হয়েছে</div>
+          <div class="fg"><label>OTP কোড <span style="color:var(--g)">(Demo: 123456)</span></label><input type="text" id="fotpcode" placeholder="123456" maxlength="6"></div>
+          <div id="otperr" class="err"><i class="ti ti-alert-circle"></i> OTP কোড ভুল।</div>
+          <button class="btn btng btn-full" onclick="verifyOTP()"><i class="ti ti-check"></i> যাচাই করুন</button>
+          <div style="text-align:center;margin-top:10px">
+            <span style="font-size:11px;color:var(--g);cursor:pointer" onclick="sendOTP()"><i class="ti ti-refresh"></i> OTP আবার পাঠান</span>
+          </div>
+        </div>
+        <!-- Step 3: New Password -->
+        <div id="fstep3" style="display:none">
+          <i class="ti ti-key step-icon"></i>
+          <div class="step-title">নতুন পাসওয়ার্ড দিন</div>
+          <div class="step-sub">শক্তিশালী পাসওয়ার্ড ব্যবহার করুন</div>
+          <div class="fg"><label>নতুন পাসওয়ার্ড</label><input type="password" id="fnewpass" placeholder="কমপক্ষে ৬ অক্ষর"></div>
+          <div class="fg"><label>পাসওয়ার্ড নিশ্চিত করুন</label><input type="password" id="fnewpass2" placeholder="আবার লিখুন"></div>
+          <div id="passerr" class="err"><i class="ti ti-alert-circle"></i> পাসওয়ার্ড মিলছে না বা খুব ছোট।</div>
+          <button class="btn btng btn-full" onclick="resetPass()"><i class="ti ti-check"></i> পাসওয়ার্ড পরিবর্তন করুন</button>
+        </div>
+        <!-- Step 4: Success -->
+        <div id="fsuccess" style="display:none;text-align:center;padding:16px 0">
+          <i class="ti ti-circle-check step-icon"></i>
+          <div class="step-title" style="color:var(--gd)">পাসওয়ার্ড পরিবর্তন সফল!</div>
+          <div class="step-sub">এখন নতুন পাসওয়ার্ড দিয়ে লগইন করুন।</div>
+          <button class="btn btng" onclick="switchTab('login')">লগইন করুন</button>
+        </div>
+        <div style="text-align:center;margin-top:12px">
+          <span style="font-size:11px;color:var(--g);cursor:pointer" onclick="switchTab('login')"><i class="ti ti-arrow-left"></i> লগইনে ফিরুন</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DASHBOARD ============ -->
+<div class="page" id="page-dashboard">
+  <div style="margin-bottom:12px">
+    <div style="font-size:15px;font-weight:700;color:var(--txt)" id="welname">স্বাগতম!</div>
+    <div style="font-size:11px;color:var(--txt2)" id="weldate"></div>
+  </div>
+  <div class="sg">
+    <div class="sc"><div class="lb"><i class="ti ti-users"></i>মোট সদস্য</div><div class="vl">১৪</div><div class="sb">জুন ২০২৫ — মে ২০২৬</div></div>
+    <div class="sc"><div class="lb"><i class="ti ti-piggy-bank"></i>মোট জমা</div><div class="vl">৳২,৮৭,৮৯০</div><div class="sb">সকল মাস মিলে</div></div>
+    <div class="sc"><div class="lb"><i class="ti ti-trending-up"></i>লাভ ফান্ড</div><div class="vl">৳১,৫০,০০০</div><div class="sb">২০২৪-২৫ বছর</div></div>
+    <div class="sc"><div class="lb"><i class="ti ti-alert-circle"></i>বকেয়া সদস্য</div><div class="vl" style="color:var(--red)">৩ জন</div><div class="sb">তানবিল, আমরুল, ফরাবি</div></div>
+  </div>
+  <div class="card">
+    <div class="st"><i class="ti ti-chart-bar"></i>মাসিক জমার চিত্র</div>
+    <div class="bar-row"><span class="mo">জুন</span><div class="bw"><div class="bf" style="width:96%">৳৩৩,১৮০</div></div><span class="am">৳৩৩,১৮০</span></div>
+    <div class="bar-row"><span class="mo">জুল</span><div class="bw"><div class="bf" style="width:80%">৳২৭,৭৬৯</div></div><span class="am">৳২৭,৭৬৯</span></div>
+    <div class="bar-row"><span class="mo">আগ</span><div class="bw"><div class="bf" style="width:78%">৳২৬,৮৬০</div></div><span class="am">৳২৬,৮৬০</span></div>
+    <div class="bar-row"><span class="mo">সেপ</span><div class="bw"><div class="bf" style="width:75%">৳২৫,৮৭০</div></div><span class="am">৳২৫,৮৭০</span></div>
+    <div class="bar-row"><span class="mo">অক্ট</span><div class="bw"><div class="bf" style="width:67%">৳২৩,১৩০</div></div><span class="am">৳২৩,১৩০</span></div>
+    <div class="bar-row"><span class="mo">নভে</span><div class="bw"><div class="bf" style="width:69%">৳২৩,৯৪০</div></div><span class="am">৳২৩,৯৪০</span></div>
+    <div class="bar-row"><span class="mo">ডিসে</span><div class="bw"><div class="bf" style="width:66%">৳২৩,০০০</div></div><span class="am">৳২৩,০০০</span></div>
+    <div class="bar-row"><span class="mo">জান</span><div class="bw"><div class="bf" style="width:75%">৳২৬,০০০</div></div><span class="am">৳২৬,০০০</span></div>
+    <div class="bar-row"><span class="mo">ফেব</span><div class="bw"><div class="bf" style="width:67%">৳২৩,১৩০</div></div><span class="am">৳২৩,১৩০</span></div>
+    <div class="bar-row"><span class="mo">মার</span><div class="bw"><div class="bf" style="width:100%">৳৩৪,৭৩১</div></div><span class="am">৳৩৪,৭৩১</span></div>
+  </div>
+  <div class="card">
+    <div class="st"><i class="ti ti-chart-pie"></i>সদস্য ওয়াইজ মোট জমা (সারসংক্ষেপ)</div>
+    <div style="font-size:12px">
+      <div style="padding:6px 0;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between"><span><span class="av">হা</span>হাবিবুল্লাহ</span><span style="font-weight:600;color:var(--g)">৳২২,২৬৬</span></div>
+      <div style="padding:6px 0;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between"><span><span class="av">হু</span>হুজ্জাতুল্লাহ</span><span style="font-weight:600;color:var(--g)">৳৬৩,৩৬৯</span></div>
+      <div style="padding:6px 0;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between"><span><span class="av">না</span>নাঈম</span><span style="font-weight:600;color:var(--g)">৳৩৮,৮৭২</span></div>
+      <div style="padding:6px 0;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between"><span><span class="av">শ</span>শরীফ</span><span style="font-weight:600;color:var(--g)">৳৪৪,৮১২</span></div>
+      <div style="padding:6px 0;display:flex;justify-content:space-between"><span style="color:var(--txt2);font-size:11px">+ আরও ১০ জন সদস্য...</span><span style="font-weight:700;color:var(--gd)">মোট: ৳২,৮৭,৮৯০</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MEMBERS ============ -->
+<div class="page" id="page-members">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+    <div class="st" style="margin:0"><i class="ti ti-users"></i>সদস্য তালিকা (জুন ২০২৫ — মে ২০২৬)</div>
+    <button class="btn btng"><i class="ti ti-plus"></i>নতুন সদস্য</button>
+  </div>
+
+  <!-- Summary Card -->
+  <div class="card" style="background:linear-gradient(135deg,var(--g),var(--gd));color:#fff;padding:14px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center">
+      <div><div style="font-size:20px;font-weight:700">১৪</div><div style="font-size:10px;opacity:.85">মোট সদস্য</div></div>
+      <div><div style="font-size:20px;font-weight:700">৳২,৮৭,৮৯০</div><div style="font-size:10px;opacity:.85">মোট জমা</div></div>
+      <div><div style="font-size:20px;font-weight:700">৳১,৫০,০০০</div><div style="font-size:10px;opacity:.85">লাভ ফান্ড</div></div>
+    </div>
+  </div>
+
+  <div class="card" style="padding:0;overflow:hidden">
+    <div style="overflow-x:auto">
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th style="width:40px">নং</th>
+          <th style="width:130px">নাম</th>
+          <th style="width:70px">এপ্রিল</th>
+          <th style="width:80px">মোট জমা</th>
+          <th style="width:90px">লাভ (২০২৪-২৫)</th>
+          <th style="width:65px">অবস্থা</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>১</td><td><span class="av">হা</span>হাবিবুল্লাহ</td><td>৳২,০০০</td><td>৳২২,২৬৬</td><td>৳১১,২৩৩</td><td><span class="badge bg">সক্রিয়</span></td></tr>
+        <tr><td>২</td><td><span class="av">হু</span>হুজ্জাতুল্লাহ</td><td>৳৫,০০০</td><td>৳৬৩,৩৬৯</td><td>৳৪৭,২৩৩</td><td><span class="badge bg">সক্রিয়</span></td></tr>
+        <tr><td>৩</td><td><span class="av">না</span>নাঈম</td><td>৳৩,০০০</td><td>৳৩৮,৮৭২</td><td>৳৩০,৭৭৩</td><td><span class="badge bg">সক্রিয়</span></td></tr>
+        <tr><td>৪</td><td><span class="av">শ</span>শরীফ</td><td>৳২,১৯০</td><td>৳৪৪,৮১২</td><td>৳২৫,৮৩৩</td><td><span class="badge bg">সক্রিয়</span></td></tr>
+        <tr><td>৫</td><td><span class="av">ই</span>ইউসুফ</td><td>৳৩,০৯০</td><td>৳৩৫,৪৪৩</td><td>৳৬,২৩৩</td><td><span class="badge bg">সক্রিয়</span></td></tr>
+        <tr><td>৬</td><td><span class="av">তা</span>তানবিল</td><td>৳০</td><td>৳৭,৩৯৮</td><td>৳১২,২৩৩</td><td><span class="badge br">বকেয়া</span></td></tr>
+        <tr><td>৭</td><td><span class="av">মু</span>মুহাব্বুল্লাহ</td><td>৳১,০০০</td><td>৳১২,৪৬৬</td><td>৳৫,২৩৩</td><td><span class="badge bg">সক্রিয়</span></td></tr>
+        <tr><td>৮</td><td><span class="av">আ</span>আমরুল</td><td>৳০</td><td>৳৮,২৬৬</td><td>৳১১,২৩৩</td><td><span class="badge br">বকেয়া</span></td></tr>
+        <tr><td>৯</td><td><span class="av">মা</span>মাহফুজ</td><td>৳০</td><td>৳৪,০০০</td><td>—</td><td><span class="badge br">নিষ্ক্রিয়</span></td></tr>
+        <tr><td>১০</td><td><span class="av">র</span>আ. রহিম</td><td>৳১,০০০</td><td>৳১১,০০০</td><td>—</td><td><span class="badge bg">সক্রিয়</span></td></tr>
+        <tr><td>১১</td><td><span class="av">ন</span>নাছরুল্লাহ</td><td>৳১,০০০</td><td>৳১১,০০০</td><td>—</td><td><span class="badge bg">সক্রিয়</span></td></tr>
+        <tr><td>১২</td><td><span class="av">হি</span>হিদায়াতুল্লাহ</td><td>৳১,০০০</td><td>৳১১,০০০</td><td>—</td><td><span class="badge bg">সক্রিয়</span></td></tr>
+        <tr><td>১৩</td><td><span class="av">আস</span>আসাদুল্লাহ</td><td>৳১,০০০</td><td>৳৯,০০০</td><td>—</td><td><span class="badge bg">সক্রিয়</span></td></tr>
+        <tr><td>১৪</td><td><span class="av">ফ</span>মুহা. ফরাবি</td><td>৳০</td><td>৳৯,০০০</td><td>—</td><td><span class="badge bo">বকেয়া</span></td></tr>
+        <tr style="background:var(--gl)"><td colspan="2"><strong>মোট</strong></td><td><strong>৳২০,২৮০</strong></td><td><strong>৳২,৮৭,৮৯০</strong></td><td><strong>৳১,৫০,০০০</strong></td><td></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROFILE ============ -->
+<div class="page" id="page-profile">
+  <div class="card">
+    <div style="display:flex;gap:14px;align-items:flex-start">
+      <div class="prof-av" id="profav">অ্যা</div>
+      <div style="flex:1">
+        <div style="font-size:16px;font-weight:700" id="profname">অ্যাডমিন</div>
+        <div style="font-size:11px;color:var(--txt2);margin-top:3px"><i class="ti ti-id-badge"></i> BD-ADMIN</div>
+        <div style="font-size:11px;color:var(--txt2)"><i class="ti ti-mail"></i> <span id="profemail">mhnayeem54@gmail.com</span></div>
+        <div style="font-size:11px;color:var(--txt2)"><i class="ti ti-phone"></i> 01XXXXXXXXX</div>
+        <div style="font-size:11px;color:var(--txt2)"><i class="ti ti-map-pin"></i> বাংলাদেশ</div>
+        <div style="font-size:11px;color:var(--txt2)"><i class="ti ti-calendar"></i> যোগদান: জানুয়ারি ২০২৪</div>
+      </div>
+    </div>
+    <div class="ps">
+      <div class="psv"><div class="pv">৳৫০০</div><div class="pl">মাসিক জমা</div></div>
+      <div class="psv"><div class="pv">৳৬,০০০</div><div class="pl">মোট জমা</div></div>
+      <div class="psv"><div class="pv">৳৯০০</div><div class="pl">মোট লাভ</div></div>
+    </div>
+    <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btng"><i class="ti ti-download"></i>রিপোর্ট ডাউনলোড</button>
+      <button class="btn"><i class="ti ti-edit"></i>প্রোফাইল সম্পাদনা</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="st"><i class="ti ti-history"></i>জমার ইতিহাস</div>
+    <table class="tbl">
+      <thead><tr><th>মাস</th><th>জমা</th><th>পদ্ধতি</th><th>লাভ</th><th>অবস্থা</th></tr></thead>
+      <tbody>
+        <tr><td>এপ্রিল ২০২৫</td><td>৳৫০০</td><td>bKash</td><td>৳৭৫</td><td><span class="badge bg">পরিশোধিত</span></td></tr>
+        <tr><td>মার্চ ২০২৫</td><td>৳৫০০</td><td>Nagad</td><td>৳৭৫</td><td><span class="badge bg">পরিশোধিত</span></td></tr>
+        <tr><td>ফেব্রুয়ারি ২০২৫</td><td>৳৫০০</td><td>ব্যাংক</td><td>৳৭৫</td><td><span class="badge bg">পরিশোধিত</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============ PAYMENT ============ -->
+<div class="page" id="page-payment">
+  <div class="st"><i class="ti ti-credit-card"></i>পেমেন্ট / টাকা জমা দিন</div>
+  <div class="card">
+    <div class="info-box"><i class="ti ti-info-circle"></i> আপনার মাসিক জমা: <strong>৳৫০০</strong> &nbsp;·&nbsp; বকেয়া: <strong style="color:var(--red)">৳০</strong></div>
+    <div class="g2">
+      <div class="fg"><label>পরিমাণ (৳) *</label><input type="number" id="payamt" placeholder="৫০০" value="500"></div>
+      <div class="fg"><label>মাস *</label>
+        <select id="paymonth"><option>মে ২০২৫</option><option>এপ্রিল ২০২৫</option><option>মার্চ ২০২৫</option><option>ফেব্রুয়ারি ২০২৫</option></select>
+      </div>
+    </div>
+    <div style="font-size:12px;font-weight:600;color:var(--txt);margin-bottom:9px">পেমেন্ট পদ্ধতি বেছে নিন:</div>
+
+    <div class="pay-method selected" id="pm-bkash" onclick="selPay('bkash')">
+      <div class="pm-icon" style="background:#e2136e">bK</div>
+      <div style="flex:1"><div class="pm-name">bKash</div><div class="pm-sub">01XXXXXXXXX · Send Money করুন</div></div>
+      <i class="ti ti-circle-check" id="ck-bkash" style="color:var(--g);font-size:18px"></i>
+    </div>
+    <div class="pay-method" id="pm-nagad" onclick="selPay('nagad')">
+      <div class="pm-icon" style="background:#f4801a">Ng</div>
+      <div style="flex:1"><div class="pm-name">Nagad</div><div class="pm-sub">01XXXXXXXXX · Send Money করুন</div></div>
+      <i class="ti ti-circle" id="ck-nagad" style="color:var(--bdr);font-size:18px"></i>
+    </div>
+    <div class="pay-method" id="pm-rocket" onclick="selPay('rocket')">
+      <div class="pm-icon" style="background:#8b23a5">Rk</div>
+      <div style="flex:1"><div class="pm-name">Rocket (DBBL)</div><div class="pm-sub">01XXXXXXXXX · Send Money করুন</div></div>
+      <i class="ti ti-circle" id="ck-rocket" style="color:var(--bdr);font-size:18px"></i>
+    </div>
+    <div class="pay-method" id="pm-bank" onclick="selPay('bank')">
+      <div class="pm-icon" style="background:#185fa5"><i class="ti ti-building-bank" style="font-size:20px"></i></div>
+      <div style="flex:1"><div class="pm-name">ব্যাংক ট্রান্সফার</div><div class="pm-sub">ইসলামী / সোনালী / জনতা ব্যাংক</div></div>
+      <i class="ti ti-circle" id="ck-bank" style="color:var(--bdr);font-size:18px"></i>
+    </div>
+
+    <div id="bank-details" style="display:none;background:var(--gl);border-radius:8px;padding:10px;margin-bottom:10px;font-size:12px;border:1px solid #a7f3d0">
+      <div style="font-weight:700;color:var(--gd);margin-bottom:6px">ব্যাংক একাউন্ট তথ্য:</div>
+      <div>ব্যাংক: ইসলামী ব্যাংক বাংলাদেশ লিমিটেড</div>
+      <div>শাখা: মতিঝিল সদর শাখা, ঢাকা</div>
+      <div>একাউন্ট নং: XXXX-XXXX-XXXX-XXXX</div>
+      <div>রাউটিং নং: XXXXXXX</div>
+    </div>
+
+    <div class="fg"><label>ট্রানজেকশন নম্বর (TrxID) *</label><input type="text" id="trxid" placeholder="যেমন: 8N5XXXXXX"></div>
+    <div class="fg"><label>মন্তব্য (ঐচ্ছিক)</label><input type="text" id="paynote" placeholder="যদি কিছু জানাতে চান..."></div>
+
+    <div id="payerr" class="err"></div>
+    <div id="paysuc" class="suc"></div>
+
+    <button class="btn btng btn-full" onclick="submitPayment()" style="margin-top:6px">
+      <i class="ti ti-send"></i> পেমেন্ট জমা দিন
+    </button>
+
+    <div class="divider">পেমেন্ট ইতিহাস</div>
+    <table class="tbl">
+      <thead><tr><th>মাস</th><th>পরিমাণ</th><th>পদ্ধতি</th><th>TrxID</th><th>অবস্থা</th></tr></thead>
+      <tbody>
+        <tr><td>এপ্র ২০২৫</td><td>৳৫০০</td><td>bKash</td><td>8N5ABCDE</td><td><span class="badge bg">অনুমোদিত</span></td></tr>
+        <tr><td>মার ২০২৫</td><td>৳৫০০</td><td>Nagad</td><td>7M4XYZAB</td><td><span class="badge bg">অনুমোদিত</span></td></tr>
+        <tr><td>ফেব ২০২৫</td><td>৳৫০০</td><td>ব্যাংক</td><td>REF12345</td><td><span class="badge bg">অনুমোদিত</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============ ACCOUNTS ============ -->
+<div class="page" id="page-accounts">
+  <div class="sg">
+    <div class="sc"><div class="lb"><i class="ti ti-arrow-down-circle"></i>এই মাসের জমা</div><div class="vl">৳৩০,০০০</div></div>
+    <div class="sc"><div class="lb"><i class="ti ti-arrow-up-circle"></i>এই মাসের খরচ</div><div class="vl" style="color:var(--red)">৳৮,০০০</div></div>
+    <div class="sc"><div class="lb"><i class="ti ti-trending-up"></i>নিট লাভ</div><div class="vl">৳২২,০০০</div></div>
+  </div>
+  <div class="card">
+    <div class="st"><i class="ti ti-receipt"></i>খরচের বিবরণ (এপ্রিল ২০২৫)</div>
+    <table class="tbl">
+      <thead><tr><th>খরচের ধরন</th><th>পরিমাণ</th><th>তারিখ</th></tr></thead>
+      <tbody>
+        <tr><td>অফিস ভাড়া</td><td>৳৩,০০০</td><td>০১ এপ্রিল</td></tr>
+        <tr><td>সভার খরচ</td><td>৳২,০০০</td><td>১০ এপ্রিল</td></tr>
+        <tr><td>বিবিধ খরচ</td><td>৳৩,০০০</td><td>১৫ এপ্রিল</td></tr>
+      </tbody>
+    </table>
+    <div style="margin-top:10px;text-align:right">
+      <button class="btn btng"><i class="ti ti-file-download"></i>PDF রিপোর্ট</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LOANS ============ -->
+<div class="page" id="page-loans">
+  <div class="st"><i class="ti ti-cash"></i>ঋণ ব্যবস্থাপনা</div>
+  <div class="card">
+    <div class="st"><i class="ti ti-list"></i>সক্রিয় ঋণ</div>
+    <table class="tbl">
+      <thead><tr><th>সদস্য</th><th>ঋণের পরিমাণ</th><th>বাকি</th><th>কিস্তি</th><th>অবস্থা</th></tr></thead>
+      <tbody>
+        <tr><td><span class="av">নু</span>নুরুল ইসলাম</td><td>৳১০,০০০</td><td>৳৭,০০০</td><td>৬টি</td><td><span class="badge bo">চলমান</span></td></tr>
+        <tr><td><span class="av">জা</span>জাকির হোসেন</td><td>৳৫,০০০</td><td>৳৫,০০০</td><td>৩টি</td><td><span class="badge br">বকেয়া</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="st"><i class="ti ti-file-plus"></i>নতুন ঋণ আবেদন</div>
+    <div class="g2">
+      <div class="fg"><label>ঋণের পরিমাণ (৳)</label><input type="number" placeholder="১০,০০০"></div>
+      <div class="fg"><label>কিস্তির সংখ্যা</label><select><option>৩ মাস</option><option>৬ মাস</option><option>১২ মাস</option></select></div>
+    </div>
+    <div class="fg"><label>ঋণের কারণ</label><input type="text" placeholder="ঋণ নেওয়ার কারণ লিখুন"></div>
+    <div class="fg"><label>গ্যারান্টার নাম</label><input type="text" placeholder="গ্যারান্টারের নাম"></div>
+    <button class="btn btng"><i class="ti ti-send"></i>আবেদন করুন</button>
+  </div>
+</div>
+
+<!-- ============ NOTICES ============ -->
+<div class="page" id="page-notices">
+  <div class="st"><i class="ti ti-bell"></i>নোটিশ বোর্ড</div>
+  <div class="nitem">
+    <div class="nt">🕌 মে মাসের সভার তারিখ নির্ধারণ</div>
+    <div style="font-size:12px;color:var(--txt);margin:4px 0">আগামী ১৫ মে ২০২৫ তারিখে মাসিক সভা অনুষ্ঠিত হবে। সকল সদস্যকে উপস্থিত থাকার জন্য অনুরোধ করা হচ্ছে।</div>
+    <div class="nd"><span class="badge bo">জরুরি</span> ০১ মে ২০২৫</div>
+  </div>
+  <div class="nitem">
+    <div class="nt">💰 এপ্রিল মাসের লাভ বণ্টন সম্পন্ন</div>
+    <div style="font-size:12px;color:var(--txt);margin:4px 0">এপ্রিল মাসের লাভ সকল সদস্যের একাউন্টে যোগ করা হয়েছে।</div>
+    <div class="nd"><span class="badge bg">তথ্য</span> ৩০ এপ্রিল ২০২৫</div>
+  </div>
+  <div class="nitem" style="border-left-color:var(--gold)">
+    <div class="nt">🎉 ঈদুল আযহার ছুটি বিশেষ ঘোষণা</div>
+    <div style="font-size:12px;color:var(--txt);margin:4px 0">ঈদের সময় জমা পরিশোধের জন্য অতিরিক্ত ৭ দিন সময় দেওয়া হবে।</div>
+    <div class="nd"><span class="badge bo">বিশেষ</span> ২৫ এপ্রিল ২০২৫</div>
+  </div>
+</div>
+
+<!-- ============ RULES ============ -->
+<div class="page" id="page-rules">
+  <div class="st"><i class="ti ti-book"></i>সমিতির নিয়মাবলি</div>
+  <div class="card">
+    <div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:10px">হযরত ওসমান গনি রা. ফাউন্ডেশন — সাধারণ নিয়মাবলি</div>
+    <div class="rl"><div class="rn">১</div><div>প্রতি মাসের ১০ তারিখের মধ্যে মাসিক চাঁদা পরিশোধ করতে হবে।</div></div>
+    <div class="rl"><div class="rn">২</div><div>বিনা কারণে টানা ৩ মাস চাঁদা না দিলে সদস্যপদ বাতিল হবে।</div></div>
+    <div class="rl"><div class="rn">৩</div><div>ঋণের সর্বোচ্চ সীমা মোট জমার ৩ গুণ পর্যন্ত।</div></div>
+    <div class="rl"><div class="rn">৪</div><div>ঋণ পরিশোধে ব্যর্থ হলে গ্যারান্টার দায়ী থাকবেন।</div></div>
+    <div class="rl"><div class="rn">৫</div><div>মাসিক সভায় উপস্থিত না থাকলে ৳৫০ জরিমানা।</div></div>
+    <div class="rl"><div class="rn">৬</div><div>লাভ বণ্টন প্রতি ৬ মাস অন্তর হবে।</div></div>
+    <div class="rl" style="border-bottom:none"><div class="rn">৭</div><div>সদস্যপদ ছাড়তে চাইলে ৩ মাস আগে নোটিশ দিতে হবে।</div></div>
+  </div>
+</div>
+
+<!-- ============ ADMIN ============ -->
+<div class="page" id="page-admin">
+  <div class="st"><i class="ti ti-settings"></i>অ্যাডমিন প্যানেল</div>
+  <div class="agrid" style="margin-bottom:12px">
+    <div class="abtn"><i class="ti ti-user-plus"></i><span>সদস্য যোগ</span></div>
+    <div class="abtn"><i class="ti ti-report-money"></i><span>হিসাব নিয়ন্ত্রণ</span></div>
+    <div class="abtn"><i class="ti ti-trending-up"></i><span>লাভ বণ্টন</span></div>
+    <div class="abtn"><i class="ti ti-check"></i><span>পেমেন্ট যাচাই</span></div>
+    <div class="abtn"><i class="ti ti-bell"></i><span>SMS নোটিশ</span></div>
+    <div class="abtn"><i class="ti ti-photo"></i><span>ব্যানার</span></div>
+    <div class="abtn"><i class="ti ti-users"></i><span>সদস্য ব্লক</span></div>
+    <div class="abtn"><i class="ti ti-file-text"></i><span>রিপোর্ট</span></div>
+    <div class="abtn"><i class="ti ti-book"></i><span>নিয়ম আপডেট</span></div>
+  </div>
+
+  <div class="card">
+    <div class="st"><i class="ti ti-user-check"></i>অনুমোদন অপেক্ষায় (নতুন রেজিস্ট্রেশন)</div>
+    <table class="tbl">
+      <thead><tr><th>নাম</th><th>ইমেইল</th><th>মোবাইল</th><th>তারিখ</th><th>একশন</th></tr></thead>
+      <tbody>
+        <tr><td>আবু বকর সিদ্দিক</td><td>abu@gmail.com</td><td>01711-XXXX</td><td>১৫ মে</td><td><button class="btn btng" style="padding:4px 9px;font-size:10px"><i class="ti ti-check"></i>অনুমোদন</button></td></tr>
+        <tr><td>সালমা বেগম</td><td>salma@gmail.com</td><td>01812-XXXX</td><td>১৬ মে</td><td><button class="btn btng" style="padding:4px 9px;font-size:10px"><i class="ti ti-check"></i>অনুমোদন</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="st"><i class="ti ti-credit-card"></i>পেমেন্ট যাচাই (অপেক্ষায়)</div>
+    <table class="tbl">
+      <thead><tr><th>সদস্য</th><th>পরিমাণ</th><th>পদ্ধতি</th><th>TrxID</th><th>একশন</th></tr></thead>
+      <tbody>
+        <tr><td>রহিম উদ্দিন</td><td>৳৫০০</td><td>bKash</td><td>8N5ABCD</td><td><button class="btn btng" style="padding:4px 9px;font-size:10px"><i class="ti ti-check"></i>অনুমোদন</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="st"><i class="ti ti-share"></i>সোশ্যাল মিডিয়া লিংক আপডেট</div>
+    <div class="fg">
+      <label><i class="ti ti-brand-facebook" style="color:#1877f2"></i> Facebook Group লিংক</label>
+      <input type="text" placeholder="https://facebook.com/groups/...">
+    </div>
+    <div class="fg">
+      <label><i class="ti ti-brand-whatsapp" style="color:#25d366"></i> WhatsApp Group লিংক</label>
+      <input type="text" placeholder="https://chat.whatsapp.com/...">
+    </div>
+    <button class="btn btng"><i class="ti ti-device-floppy"></i>সংরক্ষণ করুন</button>
+  </div>
+
+  <div class="card">
+    <div class="st"><i class="ti ti-palette"></i>থিম পরিবর্তন</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn" onclick="changeTheme('#1a7a3c','#0f5228')" style="background:#1a7a3c;color:#fff;border-color:#1a7a3c">সবুজ</button>
+      <button class="btn" onclick="changeTheme('#185fa5','#0d3d6b')" style="background:#185fa5;color:#fff;border-color:#185fa5">নীল</button>
+      <button class="btn" onclick="changeTheme('#7c3aed','#5b21b6')" style="background:#7c3aed;color:#fff;border-color:#7c3aed">বেগুনি</button>
+      <button class="btn" onclick="changeTheme('#b8860b','#7a5800')" style="background:#b8860b;color:#fff;border-color:#b8860b">সোনালি</button>
+      <button class="btn" onclick="changeTheme('#dc2626','#991b1b')" style="background:#dc2626;color:#fff;border-color:#dc2626">লাল</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl">হযরত ওসমান গনি রা. ফাউন্ডেশন · বাংলাদেশ · সর্বস্বত্ব সংরক্ষিত © ২০২৫</div>
+  <div class="icons">
+    <a href="#" title="Facebook"><i class="ti ti-brand-facebook"></i></a>
+    <a href="#" title="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+  </div>
+</footer>
+
+<script>
+// ====== USER DATA ======
+var users = [
+  {email:'mhnayeem54@gmail.com', pass:'admin123', role:'admin', name:'Nayeem (Admin)', initials:'না'},
+  {email:'member@samity.bd', pass:'member123', role:'member', name:'মোঃ রহিম উদ্দিন', initials:'রহ'}
+];
+var currentUser = null;
+var selectedPay = 'bkash';
+
+// ====== DATE ======
+document.getElementById('weldate').textContent = new Date().toLocaleDateString('bn-BD', {weekday:'long',year:'numeric',month:'long',day:'numeric'});
+
+// ====== SWITCH TAB ======
+function switchTab(t) {
+  document.getElementById('loginform').style.display = t==='login' ? 'block' : 'none';
+  document.getElementById('regform').style.display = t==='register' ? 'block' : 'none';
+  document.getElementById('forgotform').style.display = t==='forgot' ? 'block' : 'none';
+  var tabs = ['login','register','forgot'];
+  document.querySelectorAll('.tab-btn').forEach(function(b,i){ b.classList.toggle('active', tabs[i]===t); });
+  if(t==='forgot') resetForgotSteps();
+}
+
+// ====== LOGIN ======
+function doLogin() {
+  var e = document.getElementById('lemail').value.trim().toLowerCase();
+  var p = document.getElementById('lpass').value;
+  var u = users.find(function(x){ return x.email===e && x.pass===p; });
+  if(!u) { document.getElementById('lerr').style.display='block'; return; }
+  document.getElementById('lerr').style.display='none';
+  loginSuccess(u);
+}
+
+function socialLogin(type) {
+  alert('Demo: '+type+' লগইন লাইভ সাইটে কাজ করবে। এখন সদস্য হিসেবে লগইন হচ্ছে।');
+  loginSuccess(users[1]);
+}
+
+function loginSuccess(u) {
+  currentUser = u;
+  document.getElementById('topuser').textContent = 'স্বাগতম, ' + u.name;
+  var rb = document.getElementById('rolebadge');
+  rb.style.display = 'block';
+  rb.textContent = u.role==='admin' ? '⚙ Admin' : '👤 সদস্য';
+  document.getElementById('mainnav').style.display = 'flex';
+  document.getElementById('adminnav').style.display = u.role==='admin' ? 'flex' : 'none';
+  document.getElementById('profname').textContent = u.name;
+  document.getElementById('profemail').textContent = u.email;
+  document.getElementById('profav').textContent = u.initials;
+  document.getElementById('welname').textContent = 'স্বাগতম, ' + u.name + '!';
+  pg('dashboard');
+}
+
+// ====== REGISTER ======
+function doRegister() {
+  var n = document.getElementById('rname').value.trim();
+  var e = document.getElementById('remail').value.trim();
+  var ph = document.getElementById('rphone').value.trim();
+  var p = document.getElementById('rpass').value;
+  var nid = document.getElementById('rnid').value.trim();
+  var dist = document.getElementById('rdist').value;
+  var amt = document.getElementById('ramt').value;
+  var err = document.getElementById('rerr');
+  if(!n||!e||!ph||!p) { err.textContent='সব তারকা (*) চিহ্নিত ঘর পূরণ করুন।'; err.style.display='block'; return; }
+  if(p.length<6) { err.textContent='পাসওয়ার্ড কমপক্ষে ৬ অক্ষর হতে হবে।'; err.style.display='block'; return; }
+  err.style.display='none';
+
+  var btn = document.querySelector('#regfields .btng');
+  if(btn){ btn.textContent='পাঠানো হচ্ছে...'; btn.disabled=true; }
+
+  var payload = {
+    type: 'registration',
+    name: n,
+    mobile: ph,
+    email: e,
+    nid: nid,
+    district: dist,
+    amount: amt || '0'
+  };
+
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    body: JSON.stringify(payload)
+  }).then(function(r){ return r.json(); })
+  .then(function(data){
+    document.getElementById('regfields').style.display='none';
+    document.getElementById('regsuccess').style.display='block';
+  }).catch(function(){
+    document.getElementById('regfields').style.display='none';
+    document.getElementById('regsuccess').style.display='block';
+  }).finally(function(){
+    if(btn){ btn.innerHTML='<i class="ti ti-user-plus"></i> রেজিস্ট্রেশন করুন'; btn.disabled=false; }
+  });
+}
+
+// ====== FORGOT PASSWORD ======
+function sendOTP() {
+  var e = document.getElementById('femail').value.trim().toLowerCase();
+  if(!e) { document.getElementById('ferr').style.display='block'; return; }
+  var found = users.find(function(x){ return x.email===e; });
+  if(!found) { document.getElementById('ferr').style.display='block'; return; }
+  document.getElementById('ferr').style.display='none';
+  document.getElementById('otpsentto').textContent = e + ' তে OTP পাঠানো হয়েছে (Demo: 123456)';
+  document.getElementById('fstep1').style.display='none';
+  document.getElementById('fstep2').style.display='block';
+}
+
+function verifyOTP() {
+  var otp = document.getElementById('fotpcode').value.trim();
+  if(otp !== '123456') { document.getElementById('otperr').style.display='block'; return; }
+  document.getElementById('otperr').style.display='none';
+  document.getElementById('fstep2').style.display='none';
+  document.getElementById('fstep3').style.display='block';
+}
+
+function resetPass() {
+  var p1 = document.getElementById('fnewpass').value;
+  var p2 = document.getElementById('fnewpass2').value;
+  var err = document.getElementById('passerr');
+  if(p1.length<6 || p1!==p2) { err.style.display='block'; return; }
+  err.style.display='none';
+  document.getElementById('fstep3').style.display='none';
+  document.getElementById('fsuccess').style.display='block';
+}
+
+function resetForgotSteps() {
+  ['fstep1','fstep2','fstep3','fsuccess'].forEach(function(id,i){
+    document.getElementById(id).style.display = i===0?'block':'none';
+  });
+  ['ferr','otperr','passerr'].forEach(function(id){ document.getElementById(id).style.display='none'; });
+  document.getElementById('femail').value='';
+  document.getElementById('fotpcode').value='';
+}
+
+// ====== PAYMENT ======
+function selPay(method) {
+  selectedPay = method;
+  ['bkash','nagad','rocket','bank'].forEach(function(m) {
+    var pm = document.getElementById('pm-'+m);
+    var ck = document.getElementById('ck-'+m);
+    if(pm) pm.classList.toggle('selected', m===method);
+    if(ck) {
+      if(m===method){ ck.className='ti ti-circle-check'; ck.style.color='var(--g)'; }
+      else { ck.className='ti ti-circle'; ck.style.color='var(--bdr)'; }
+    }
+  });
+  document.getElementById('bank-details').style.display = method==='bank'?'block':'none';
+}
+
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwDCRtYcA8LMitbJwqZqXntXZBSq5pItOitMMx2Jp0Df99I3-kjNA8TV5kFScZvsR4n/exec';
+
+function submitPayment() {
+  var amt = document.getElementById('payamt').value;
+  var trx = document.getElementById('trxid').value.trim();
+  var month = document.getElementById('paymonth').value;
+  var note = document.getElementById('paynote').value;
+  var err = document.getElementById('payerr');
+  var suc = document.getElementById('paysuc');
+  err.style.display='none'; suc.style.display='none';
+  if(!amt || parseInt(amt)<100) { err.textContent='সঠিক পরিমাণ দিন (কমপক্ষে ৳১০০)।'; err.style.display='block'; return; }
+  if(!trx) { err.textContent='ট্রানজেকশন নম্বর (TrxID) দিন।'; err.style.display='block'; return; }
+
+  var btn = document.querySelector('#page-payment .btng');
+  if(btn){ btn.textContent='পাঠানো হচ্ছে...'; btn.disabled=true; }
+
+  var payload = {
+    type: 'payment',
+    name: currentUser ? currentUser.name : 'অজ্ঞাত',
+    month: month,
+    amount: amt,
+    method: selectedPay,
+    trxid: trx,
+    note: note
+  };
+
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    body: JSON.stringify(payload)
+  }).then(function(r){ return r.json(); })
+  .then(function(data){
+    suc.textContent='✅ পেমেন্ট জমা সফল! ৳'+parseInt(amt).toLocaleString()+' ('+selectedPay.toUpperCase()+' · TrxID: '+trx+') — অ্যাডমিন Google Sheet এ দেখতে পাবেন।';
+    suc.style.display='block';
+    document.getElementById('trxid').value='';
+    document.getElementById('paynote').value='';
+  }).catch(function(){
+    suc.textContent='✅ পেমেন্ট তথ্য জমা হয়েছে! অ্যাডমিন শীঘ্রই যাচাই করবেন।';
+    suc.style.display='block';
+    document.getElementById('trxid').value='';
+  }).finally(function(){
+    if(btn){ btn.innerHTML='<i class="ti ti-send"></i> পেমেন্ট জমা দিন'; btn.disabled=false; }
+  });
+}
+
+// ====== LOGOUT ======
+function logout() {
+  currentUser = null;
+  document.getElementById('topuser').textContent='লগইন করুন';
+  document.getElementById('rolebadge').style.display='none';
+  document.getElementById('mainnav').style.display='none';
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById('page-auth').classList.add('active');
+  switchTab('login');
+  document.getElementById('lemail').value='';
+  document.getElementById('lpass').value='';
+  document.getElementById('regsuccess').style.display='none';
+  document.getElementById('regfields').style.display='block';
+}
+
+// ====== PAGE NAVIGATION ======
+function pg(name) {
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.ni').forEach(function(n){ n.classList.remove('active'); });
+  var p = document.getElementById('page-'+name);
+  if(p) p.classList.add('active');
+  var map = {dashboard:0,members:1,profile:2,payment:3,accounts:4,loans:5,notices:6,rules:7};
+  var nis = document.querySelectorAll('.ni');
+  if(map[name]!==undefined && nis[map[name]]) nis[map[name]].classList.add('active');
+  if(name==='admin'){ var an=document.getElementById('adminnav'); if(an)an.classList.add('active'); }
+  window.scrollTo(0,0);
+}
+
+// ====== THEME ======
+function changeTheme(main, dark) {
+  document.documentElement.style.setProperty('--g', main);
+  document.documentElement.style.setProperty('--gd', dark);
+}
+</script>
+</body>
+</html>
